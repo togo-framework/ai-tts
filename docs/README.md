@@ -16,9 +16,9 @@ Environment variables read by this plugin (extracted from the source — see the
 
 | Env var |
 |---|
-| `ELEVENLABS_API_KEY"` |
-| `OPENAI_API_KEY"` |
-| `TTS_DRIVER"` |
+| `ELEVENLABS_API_KEY` |
+| `OPENAI_API_KEY` |
+| `TTS_DRIVER` |
 
 ## Usage
 
