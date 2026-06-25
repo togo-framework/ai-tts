@@ -1,6 +1,6 @@
 # ai-tts — documentation
 
-  <img src=".github/assets/togo-mark.svg" alt="togo" height="64" />
+Text-to-Speech for togo — ElevenLabs + OpenAI TTS drivers (TTS_DRIVER)
 
 ## Install
 
@@ -12,14 +12,13 @@ A capability plugin — it self-registers on boot; no driver selector needed.
 
 ## Configuration
 
-Environment variables read by this plugin (extracted from the source):
+Environment variables read by this plugin (extracted from the source — see the gateway/provider docs for each value):
 
-| Env var | Notes |
-|---|---|
-| `ELEVENLABS_API_KEY` | _see provider docs_ |
-| `G` | _see provider docs_ |
-| `OPENAI_API_KEY` | _see provider docs_ |
-| `TTS_DRIVER` | _see provider docs_ |
+| Env var |
+|---|
+| `ELEVENLABS_API_KEY"` |
+| `OPENAI_API_KEY"` |
+| `TTS_DRIVER"` |
 
 ## Usage
 
@@ -31,4 +30,4 @@ audio, err := tts.FromKernel(k).Synthesize(ctx, "Hello world", tts.Options{})
 
 - Marketplace: https://to-go.dev/marketplace
 - Source: https://github.com/togo-framework/ai-tts
-- README: ../README.md
+- Full README: ../README.md
