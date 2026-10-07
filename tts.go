@@ -69,6 +69,11 @@ func init() {
 	togo.RegisterProviderFunc("ai-tts", togo.PriorityService, func(k *togo.Kernel) error {
 		name := os.Getenv("TTS_DRIVER")
 		if name == "" {
+			// nothing chosen and no key for the default: TTS is simply not configured,
+			// so leave the service unset (FromKernel reports false) instead of failing boot
+			if os.Getenv("OPENAI_API_KEY") == "" {
+				return nil
+			}
 			name = "openai"
 		}
 		regMu.RLock()
