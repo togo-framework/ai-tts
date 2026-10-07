@@ -45,6 +45,9 @@ TTS_DRIVER=elevenlabs
 ELEVENLABS_API_KEY=...
 ```
 
+With neither `TTS_DRIVER` nor `OPENAI_API_KEY` set, TTS is not configured: boot carries on and
+`FromKernel` reports `false`. An explicit `TTS_DRIVER` whose key is missing still fails boot.
+
 Add another provider by registering a driver in an `init()` — see `tts.RegisterDriver`.
 
 ## Use (Go)
